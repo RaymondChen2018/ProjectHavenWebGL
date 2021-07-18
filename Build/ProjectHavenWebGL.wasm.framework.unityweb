@@ -295,6 +295,13 @@ function SendMessage(gameObject, func, param) {
  if (param === undefined) Module.ccall("SendMessage", null, [ "string", "string" ], [ gameObject, func ]); else if (typeof param === "string") Module.ccall("SendMessageString", null, [ "string", "string", "string" ], [ gameObject, func, param ]); else if (typeof param === "number") Module.ccall("SendMessageFloat", null, [ "string", "string", "number" ], [ gameObject, func, param ]); else throw "" + param + " is does not have a type which is supported by SendMessage.";
 }
 Module["SendMessage"] = SendMessage;
+var _JS_UNETWebSockets_SocketCreate_Original = _JS_UNETWebSockets_SocketCreate;
+_JS_UNETWebSockets_SocketCreate = (function(hostId, urlPtr) {
+ var url = Pointer_stringify(urlPtr).replace(/^ws:\/\//, "wss://");
+ urlPtr = stackAlloc((url.length << 2) + 1);
+ stringToUTF8(url, urlPtr, (url.length << 2) + 1);
+ return _JS_UNETWebSockets_SocketCreate_Original(hostId, urlPtr);
+});
 var moduleOverrides = {};
 var key;
 for (key in Module) {
