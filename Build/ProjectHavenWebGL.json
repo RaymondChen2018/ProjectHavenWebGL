@@ -1,16 +1,13 @@
 {
 "companyName": "DefaultCompany",
-"productName": "ProjectHaven",
-"productVersion": "0.1",
+"productName": "A_Dream",
 "dataUrl": "ProjectHavenWebGL.data.unityweb",
-"wasmCodeUrl": "ProjectHavenWebGL.wasm.code.unityweb",
-"wasmFrameworkUrl": "ProjectHavenWebGL.wasm.framework.unityweb",
-"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"asmCodeUrl": "ProjectHavenWebGL.asm.code.unityweb",
+"asmMemoryUrl": "ProjectHavenWebGL.asm.memory.unityweb",
+"asmFrameworkUrl": "ProjectHavenWebGL.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
 "webglContextAttributes": {"preserveDrawingBuffer": false},
 "splashScreenStyle": "Dark",
-"backgroundColor": "#231F20",
-"cacheControl": {"default": "must-revalidate"},
-"developmentBuild": true,
-"multithreading": false,
-"unityVersion": "2019.2.9f1"
+"backgroundColor": "#231F20"
 }
